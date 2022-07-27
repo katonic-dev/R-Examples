@@ -1,0 +1,588 @@
+{
+  "doc_type": "pipeline",
+  "version": "3.0",
+  "json_schema": "http://api.dataplatform.ibm.com/schemas/common-pipeline/pipeline-flow/pipeline-flow-v3-schema.json",
+  "id": "elyra-auto-generated-pipeline",
+  "primary_pipeline": "primary",
+  "pipelines": [
+    {
+      "id": "primary",
+      "nodes": [
+        {
+          "id": "6212901b-0462-4d84-bb19-aebada8e12e1",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "read_data.r",
+              "outputs": [
+                "iris.csv"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "read_data.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 21,
+              "y_pos": 93,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              }
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "cb54c304-18f6-46cc-a064-b36e27b980bd",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "split_data.r",
+              "outputs": [
+                "train.csv",
+                "validation.csv"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "split_data.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 233,
+              "y_pos": 169,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "2b8dbbb4-afc5-467f-af10-bb2bb5801bdb",
+                  "node_id_ref": "6212901b-0462-4d84-bb19-aebada8e12e1",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "92c086b7-065e-4a6e-864b-7ef511b28663",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "data_distribution.r",
+              "outputs": [
+                "control.rds",
+                "features.csv",
+                "target.csv"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "data_distribution.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 413,
+              "y_pos": 78,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "bd949426-4ada-45a2-93a3-74fb6a8ef20a",
+                  "node_id_ref": "cb54c304-18f6-46cc-a064-b36e27b980bd",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "b19da5b7-eb0a-4828-9116-4397b2b61ee9",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "cart.r",
+              "outputs": [
+                "cart.rds"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "cart.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 628,
+              "y_pos": -32.99999809265137,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "36eebb1b-df41-45f8-b3ac-949bb5145fb1",
+                  "node_id_ref": "92c086b7-065e-4a6e-864b-7ef511b28663",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "46d59571-1636-4e07-9864-b90fab8b2cb1",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "knn.r",
+              "outputs": [
+                "knn.rds"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "knn.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 626,
+              "y_pos": 40,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "9b27cc2e-d554-4420-b26f-4e4540798b24",
+                  "node_id_ref": "92c086b7-065e-4a6e-864b-7ef511b28663",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "3e74cfc4-d14d-4fd4-996c-c16f1e9836bc",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "lda.r",
+              "outputs": [
+                "lda.rds"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "lda.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 637,
+              "y_pos": 166,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "629cc76c-d19d-45fb-b72d-9642f8f9a94c",
+                  "node_id_ref": "92c086b7-065e-4a6e-864b-7ef511b28663",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "d3507008-76c9-436c-adeb-99f68e76fa8f",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "randomforest.r",
+              "outputs": [
+                "rf.rds"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "randomforest.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 629,
+              "y_pos": 223,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "c276a5e4-f339-4d2d-8bdf-83a27d1fc287",
+                  "node_id_ref": "92c086b7-065e-4a6e-864b-7ef511b28663",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "706fd155-0bb5-4742-9cf4-bf622feb2df0",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "svm.r",
+              "outputs": [
+                "svm.rds"
+              ],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "svm.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 636,
+              "y_pos": 298,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "bec29891-2ad0-44af-9c31-52075c6a16d1",
+                  "node_id_ref": "92c086b7-065e-4a6e-864b-7ef511b28663",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "990523b8-cc03-45ee-b71d-b2071e304519",
+          "type": "execution_node",
+          "op": "execute-r-node",
+          "app_data": {
+            "component_parameters": {
+              "filename": "model_evaluation.r",
+              "outputs": [],
+              "env_vars": [],
+              "dependencies": [],
+              "include_subdirectories": false,
+              "mounted_volumes": []
+            },
+            "label": "",
+            "ui_data": {
+              "label": "model_evaluation.r",
+              "image": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2232%22%20height%3D%2232%22%20viewBox%3D%220%200%20724%20561%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-1%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(203%2C206%2C208)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(132%2C131%2C139)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gradientFill-2%22%20x1%3D%220%22%20x2%3D%221%22%20y1%3D%220%22%20y2%3D%221%22%20gradientUnits%3D%22objectBoundingBox%22%20spreadMethod%3D%22pad%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22rgb(39%2C109%2C195)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22rgb(22%2C92%2C170)%22%20stop-opacity%3D%221%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Cpath%20d%3D%22M361.453%2C485.937%20C162.329%2C485.937%200.906%2C377.828%200.906%2C244.469%20C0.906%2C111.109%20162.329%2C3.000%20361.453%2C3.000%20C560.578%2C3.000%20722.000%2C111.109%20722.000%2C244.469%20C722.000%2C377.828%20560.578%2C485.937%20361.453%2C485.937%20ZM416.641%2C97.406%20C265.289%2C97.406%20142.594%2C171.314%20142.594%2C262.484%20C142.594%2C353.654%20265.289%2C427.562%20416.641%2C427.562%20C567.992%2C427.562%20679.687%2C377.033%20679.687%2C262.484%20C679.687%2C147.971%20567.992%2C97.406%20416.641%2C97.406%20Z%22%20fill%3D%22url(%23gradientFill-1)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M550.000%2C377.000%20C550.000%2C377.000%20571.822%2C383.585%20584.500%2C390.000%20C588.899%2C392.226%20596.510%2C396.668%20602.000%2C402.500%20C607.378%2C408.212%20610.000%2C414.000%20610.000%2C414.000%20L696.000%2C559.000%20L557.000%2C559.062%20L492.000%2C437.000%20C492.000%2C437.000%20478.690%2C414.131%20470.500%2C407.500%20C463.668%2C401.969%20460.755%2C400.000%20454.000%2C400.000%20C449.298%2C400.000%20420.974%2C400.000%20420.974%2C400.000%20L421.000%2C558.974%20L298.000%2C559.026%20L298.000%2C152.938%20L545.000%2C152.938%20C545.000%2C152.938%20657.500%2C154.967%20657.500%2C262.000%20C657.500%2C369.033%20550.000%2C377.000%20550.000%2C377.000%20ZM496.500%2C241.024%20L422.037%2C240.976%20L422.000%2C310.026%20L496.500%2C310.002%20C496.500%2C310.002%20531.000%2C309.895%20531.000%2C274.877%20C531.000%2C239.155%20496.500%2C241.024%20496.500%2C241.024%20Z%22%20fill%3D%22url(%23gradientFill-2)%22%20fill-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A",
+              "x_pos": 894,
+              "y_pos": 103,
+              "description": "Run R script"
+            }
+          },
+          "inputs": [
+            {
+              "id": "inPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Input Port"
+                }
+              },
+              "links": [
+                {
+                  "id": "45443c10-7cc3-4688-a1b1-6bec73042e2b",
+                  "node_id_ref": "b19da5b7-eb0a-4828-9116-4397b2b61ee9",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "e99fbd23-e31c-4b8f-a765-cbdd63754193",
+                  "node_id_ref": "46d59571-1636-4e07-9864-b90fab8b2cb1",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "c37454af-3633-4850-a6fb-bc88093bf445",
+                  "node_id_ref": "3e74cfc4-d14d-4fd4-996c-c16f1e9836bc",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "4ea98405-cb94-4a47-a594-1f89f3e05e5e",
+                  "node_id_ref": "d3507008-76c9-436c-adeb-99f68e76fa8f",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "6fa8c6a7-7a2d-4797-b7ab-e2039cc3e52d",
+                  "node_id_ref": "706fd155-0bb5-4742-9cf4-bf622feb2df0",
+                  "port_id_ref": "outPort"
+                },
+                {
+                  "id": "f6b1ebea-27ae-41ca-a3c9-b54714386295",
+                  "node_id_ref": "cb54c304-18f6-46cc-a064-b36e27b980bd",
+                  "port_id_ref": "outPort"
+                }
+              ]
+            }
+          ],
+          "outputs": [
+            {
+              "id": "outPort",
+              "app_data": {
+                "ui_data": {
+                  "cardinality": {
+                    "min": 0,
+                    "max": -1
+                  },
+                  "label": "Output Port"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "app_data": {
+        "ui_data": {
+          "comments": []
+        },
+        "version": 7,
+        "properties": {
+          "pipeline_defaults": {
+            "runtime_image": "katonic/katonic-r-image:v1.0.1"
+          },
+          "name": "iris_flower_classification",
+          "runtime": "Katonic"
+        }
+      },
+      "runtime_ref": ""
+    }
+  ],
+  "schemas": []
+}
