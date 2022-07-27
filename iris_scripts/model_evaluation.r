@@ -1,5 +1,9 @@
 # summarize accuracy of models
+# install.packages("caret", dependencies=c("Depends", "Suggests"),repos = "http://cran.us.r-project.org")
 
+# install.packages("gower",repos = "http://cran.us.r-project.org")
+# install.packages("parallelly",repos = "http://cran.us.r-project.org")
+# install.packages("ModelMetrics",repos = "http://cran.us.r-project.org")
 library(caret)
 
 fit.lda <- readRDS("lda.rds")
